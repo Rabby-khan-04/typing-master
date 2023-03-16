@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/e3f461dde5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="py-10">
+        <img src="./img/logo.png" class="w-auto block mx-auto" alt="">
+    </header>
+
+    <main>
+        <section>
+            <div class="w-4/5 mx-auto">
+                <div class="text-center mb-5">
+                    <p class="mb-3 text-white text-xl"><span id="time">00 : 00</span> second</p>
+                    <p class="text-[#646669] inline-block text-xl hover:text-[#d1d0c5]"><i
+                            class="fa-solid fa-earth-americas"></i> english
+                    </p>
+                </div>
+                <div>
+                    <p class=" text-center text-2xl text-[#646669] font-mono" id="quote"></p>
+                </div>
+
+                <div class="flex gap-4 justify-center items-center mt-5">
+                    <a id="start"
+                        class="border-2 border-[#9dffad] rounded-lg text-xl px-12 pb-2 pt-1 text-white">Start</a>
+                    <a id="refresh" class="text-2xl text-[#646669]"><i class="fa-solid fa-arrows-rotate"></i></a>
+                </div>
+
+            </div>
+            <div id="counterOverlay"
+                class="absolute bg-[#000000b3] w-full h-full top-0 left-0 hidden justify-center items-center">
+                <h2 id="counter" class="text-white text-8xl"></h2>
+            </div>
+        </section>
+
+        <section id="historyContainer" class="py-10 hidden">
+            <div class="w-4/5 mx-auto">
+                <div class="flex gap-4 justify-center items-center">
+                    <div class="w-40 h-1 bg-[#9dffad]"></div>
+                    <h2 class="text-white text-2xl ">History</h2>
+                    <div class="w-40 h-1 bg-[#9dffad]"></div>
+                </div>
+                <div id="history"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
